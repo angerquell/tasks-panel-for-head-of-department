@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Вход</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+
+
+
+<div id="particles-js">
+  <div class="login-container">
+    <div class="login-box">
+        <h1>Вход</h1>
+        <form method="POST" action="{{ url_for('login') }}" autocomplete="off" >
+          {{ form.hidden_tag() }}
+          <div>
+              {{ form.username(class="form-input", placeholder="Введите логин") }}
+          </div>
+          <div>
+              {{ form.password(class="form-input", placeholder="Введите пароль") }}
+          </div>
+          <div>
+              {{ form.submit(class="form-button") }}
+          </div>
+          <p>Нет аккаунта? <a href="{{ url_for('register') }}">Зарегистрироваться</a></p>
+        </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class=flashes style="color: red;">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+    </div>
+
+</div>
+</div>
+
+
+
+<script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+</body>
+</html>

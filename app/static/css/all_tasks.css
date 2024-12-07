@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-panel {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.task-table th, .task-table td {
+  border: 1px solid #dddddd;
+  padding: 12px 15px;
+  vertical-align: top;
+}
+
+.task-table th {
+  background-color: #f8f8f8;
+  color: #333333;
+  font-weight: bold;
+  
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.task-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.task-table td {
+  color: #555555;
+  color: #555555;
+  word-wrap: break-word; 
+  word-break: break-word; 
+  max-width: 200px; 
+  white-space: normal; 
+}
+
+.task-table td:nth-child(1), 
+.task-table th:nth-child(1) {
+  text-align: center;
+  width: 50px;
+}
+
+.task-table td:nth-child(8),
+.task-table th:nth-child(8) {
+  text-align: center;
+  width: 100px;
+}
